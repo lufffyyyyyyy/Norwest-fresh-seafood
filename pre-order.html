@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-Order — Norwest Fresh Seafood</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><span class="logo-icon">🐟</span><div class="logo-text"><span class="logo-main">Norwest Fresh Seafood</span><span class="logo-sub">Est. 2002</span></div></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="fresh-seafood.html">Fresh Seafood</a></li><li><a href="gourmet.html">Gourmet</a></li><li><a href="cooked-food.html">Cooked Food</a></li><li><a href="frozen.html">Frozen</a></li><li><a href="catering.html">Catering</a></li><li><a href="contact.html">Contact</a></li><li><a href="pre-order.html" class="nav-cta active">Pre-Order</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="background:linear-gradient(135deg,#0C7B93,#0A4A6B);">
+    <div class="container">
+      <p class="section-eyebrow" style="color:#00B4D8;">Skip the Queue</p>
+      <h1 class="page-title">Pre-Order for Pickup</h1>
+      <p class="page-sub">Place your order online and we will have it fresh and ready when you arrive.</p>
+    </div>
+  </section>
+
+  <section class="page-content" style="background:#F8FAFC;">
+    <div class="container">
+      <div class="preorder-layout">
+
+        <div class="preorder-form-wrap">
+          <h2 class="section-title">Place Your Order</h2>
+          <p style="color:#6B7280;margin-bottom:32px;">Fill in the form below and we will confirm your order by phone.</p>
+
+          <form id="preorderForm" class="preorder-form" onsubmit="submitOrder(event)">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 0412 345 678" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="e.g. name@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="product">Product Category *</label>
+              <select id="product" name="product" required>
+                <option value="">-- Select a category --</option>
+                <option value="fresh-seafood">Fresh Seafood</option>
+                <option value="gourmet">Gourmet & Premium</option>
+                <option value="cooked-food">Cooked Food</option>
+                <option value="frozen">Frozen Products</option>
+                <option value="catering">Catering Order</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity / Amount *</label>
+              <input type="text" id="quantity" name="quantity" placeholder="e.g. 1kg salmon fillets, 2 dozen oysters" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupDate">Preferred Pickup Date *</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+              </div>
+              <div class="form-group">
+                <label for="pickupTime">Preferred Pickup Time *</label>
+                <select id="pickupTime" name="pickupTime" required>
+                  <option value="">-- Select time --</option>
+                  <option value="7am-9am">7:00am – 9:00am</option>
+                  <option value="9am-11am">9:00am – 11:00am</option>
+                  <option value="11am-1pm">11:00am – 1:00pm</option>
+                  <option value="1pm-3pm">1:00pm – 3:00pm</option>
+                  <option value="3pm-5pm">3:00pm – 5:00pm</option>
+                  <option value="5pm-7pm">5:00pm – 7:00pm</option>
+                  <option value="7pm-9pm">7:00pm – 9:00pm</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="instructions">Special Instructions</label>
+              <textarea id="instructions" name="instructions" rows="4" placeholder="Any special requests, allergies or notes..."></textarea>
+            </div>
+
+            <div id="formError" class="form-error" style="display:none;color:red;margin-bottom:16px;font-size:14px;"></div>
+
+            <button type="submit" class="btn-primary" style="width:100%;padding:16px;font-size:16px;">Submit Pre-Order</button>
+
+          </form>
+
+          <div id="successMessage" style="display:none;text-align:center;padding:48px 24px;">
+            <div style="font-size:64px;margin-bottom:16px;">✅</div>
+            <h2 style="margin-bottom:12px;">Order Received!</h2>
+            <p style="color:#6B7280;">Thank you for your pre-order. We will call you on the number provided to confirm your order details.</p>
+            <a href="index.html" class="btn-primary" style="margin-top:24px;display:inline-block;">Back to Home</a>
+          </div>
+        </div>
+
+        <div class="preorder-info">
+          <div class="info-card">
+            <h3>📍 Pickup Location</h3>
+            <p>Norwest Fresh Seafood<br>4 Century Circuit<br>Norwest NSW 2153<br>Norwest Marketplace</p>
+          </div>
+          <div class="info-card">
+            <h3>🕐 Store Hours</h3>
+            <p>Monday – Sunday<br>7:00am – 9:00pm</p>
+          </div>
+          <div class="info-card">
+            <h3>📞 Questions?</h3>
+            <p>Call us directly:<br><strong>(02) 8850 4588</strong></p>
+          </div>
+          <div class="info-card">
+            <h3>ℹ️ How It Works</h3>
+            <p>1. Fill in the form<br>2. We call to confirm<br>3. Pick up at the store<br>4. Fresh & ready for you</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>Norwest Fresh Seafood</h3><p>📍 4 Century Circuit, Norwest NSW 2153</p><p>📞 (02) 8850 4588</p><p>🕐 Mon–Sun: 7am–9pm</p></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="fresh-seafood.html">Fresh Seafood</a></li><li><a href="gourmet.html">Gourmet & Premium</a></li><li><a href="cooked-food.html">Cooked Food</a></li><li><a href="frozen.html">Frozen & Grocery</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="catering.html">Catering</a></li><li><a href="pre-order.html">Pre-Order</a></li></ul></div>
+        <div class="footer-col"><h4>Info</h4><ul><li><a href="contact.html">Contact Us</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Norwest Fresh Seafood. All rights reserved.</p><p>🏆 2022 Sydney Hills Local Business Award</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    function submitOrder(e) {
+      e.preventDefault();
+      const errorDiv = document.getElementById('formError');
+      const fields = ['firstName','lastName','phone','email','product','quantity','pickupDate','pickupTime'];
+      for (let f of fields) {
+        if (!document.getElementById(f).value.trim()) {
+          errorDiv.style.display = 'block';
+          errorDiv.textContent = 'Please fill in all required fields before submitting.';
+          return;
+        }
+      }
+      errorDiv.style.display = 'none';
+      document.getElementById('preorderForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
