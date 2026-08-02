@@ -879,3 +879,149 @@ img {
   gap: 16px;
   z-index: 998;
 }
+
+/* ── PETER'S SPECIAL PICKS ── */
+.specials {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #8B0000 0%, #C0392B 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.specials::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.specials-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.specials-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 20px;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.specials-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.specials-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.special-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: transform 0.25s;
+}
+
+.special-card:hover {
+  transform: translateY(-6px);
+}
+
+.special-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: #C0392B;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+.special-img {
+  height: 180px;
+  background: #eee;
+}
+
+.special-info {
+  padding: 16px;
+}
+
+.special-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.special-desc {
+  font-size: 12px;
+  color: var(--grey);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.special-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.new-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: #C0392B;
+}
+
+.special-save {
+  font-size: 11px;
+  font-weight: 700;
+  color: #27AE60;
+  background: #EAFAF1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .specials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .specials-grid { grid-template-columns: 1fr; }
+  .specials-title { font-size: 28px; }
+}
