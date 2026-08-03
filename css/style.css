@@ -1211,3 +1211,155 @@ body.page-exit { opacity: 0; }
   #backToTop { bottom: 130px; }
   #whatsapp { bottom: 70px; }
 }
+
+/* ── ABOUT PETER ── */
+.about-peter {
+  padding: 96px 0;
+  background: var(--white);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-img {
+  position: relative;
+}
+
+.about-img-placeholder {
+  background: linear-gradient(135deg, var(--navy), #0A3D55);
+  border-radius: 20px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: var(--grey);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.about-stat-label {
+  font-size: 12px;
+  color: var(--grey);
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials {
+  padding: 96px 0;
+  background: var(--light);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 16px rgba(10,22,40,0.06);
+  border: 1px solid #E5E7EB;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stars {
+  font-size: 18px;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--teal);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.author-location {
+  font-size: 12px;
+  color: var(--grey);
+}
+
+/* ── CATERING FORM ── */
+.catering-form-section {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.catering-form {
+  max-width: 700px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 16px rgba(10,22,40,0.08);
+  border: 1px solid #E5E7EB;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .about-layout { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .about-stats { gap: 20px; flex-wrap: wrap; }
+  .catering-form { padding: 24px; }
+}
