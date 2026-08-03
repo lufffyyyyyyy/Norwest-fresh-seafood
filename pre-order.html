@@ -7,12 +7,21 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-logo">🐟</div>
+    <div class="loader-text">Norwest Fresh Seafood</div>
+    <div class="loader-sub">Est. 2002 · Norwest Marketplace</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo"><span class="logo-icon">🐟</span><div class="logo-text"><span class="logo-main">Norwest Fresh Seafood</span><span class="logo-sub">Est. 2002</span></div></div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li><li><a href="fresh-seafood.html">Fresh Seafood</a></li><li><a href="gourmet.html">Gourmet</a></li><li><a href="cooked-food.html">Cooked Food</a></li><li><a href="frozen.html">Frozen</a></li><li><a href="catering.html">Catering</a></li><li><a href="contact.html">Contact</a></li><li><a href="pre-order.html" class="nav-cta active">Pre-Order</a></li>
       </ul>
+      <span id="openIndicator"></span>
       <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
   </nav>
@@ -164,5 +173,15 @@
       document.getElementById('successMessage').style.display = 'block';
     }
   </script>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- WHATSAPP -->
+  <a id="whatsapp" href="https://wa.me/610288504588" target="_blank" title="Chat on WhatsApp">💬</a>
+
+  <!-- MOBILE CALL BANNER -->
+  <a class="mobile-call-banner" href="tel:0288504588">📞 Tap to Call — (02) 8850 4588</a>
+
 </body>
 </html>
