@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Norwest Fresh Seafood</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-logo">🐟</div>
+    <div class="loader-text">Norwest Fresh Seafood</div>
+    <div class="loader-sub">Est. 2002 · Norwest Marketplace</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">🐟</span>
+        <div class="logo-text">
+          <span class="logo-main">Norwest Fresh Seafood</span>
+          <span class="logo-sub">Est. 2002</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fresh-seafood.html">Fresh Seafood</a></li>
+        <li><a href="gourmet.html">Gourmet</a></li>
+        <li><a href="cooked-food.html">Cooked Food</a></li>
+        <li><a href="frozen.html">Frozen</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pre-order.html" class="nav-cta">Pre-Order</a></li>
+      </ul>
+      <span id="openIndicator"></span>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="margin-top:70px;">
+    <div class="container">
+      <p class="section-eyebrow">Our Store</p>
+      <h1 class="page-title">Photo Gallery</h1>
+      <p class="page-sub">Fresh from the ocean to our store — see our full range of premium seafood products.</p>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="gallery-grid">
+        
+        <div class="gallery-item" onclick="openLightbox('images/abalone.jpg', 'Abalone')">
+          <img src="images/abalone.jpg" alt="Abalone" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/atlantic-salmon.jpg', 'Atlantic Salmon')">
+          <img src="images/atlantic-salmon.jpg" alt="Atlantic Salmon" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/avruga.jpg', 'Avruga')">
+          <img src="images/avruga.jpg" alt="Avruga" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/barramundi-1.jpg', 'Barramundi 1')">
+          <img src="images/barramundi-1.jpg" alt="Barramundi 1" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/barramundi-side.jpg', 'Barramundi Side')">
+          <img src="images/barramundi-side.jpg" alt="Barramundi Side" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/barramundi.jpg', 'Barramundi')">
+          <img src="images/barramundi.jpg" alt="Barramundi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/blue-eye-cod.jpg', 'Blue Eye Cod')">
+          <img src="images/blue-eye-cod.jpg" alt="Blue Eye Cod" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/bluefin-tuna.jpg', 'Bluefin Tuna')">
+          <img src="images/bluefin-tuna.jpg" alt="Bluefin Tuna" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/caesar.jpg', 'Caesar')">
+          <img src="images/caesar.jpg" alt="Caesar" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/chicken-salt.jpg', 'Chicken Salt')">
+          <img src="images/chicken-salt.jpg" alt="Chicken Salt" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/coleslaw.jpg', 'Coleslaw')">
+          <img src="images/coleslaw.jpg" alt="Coleslaw" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/cooked-and-peeled-prawn.jpg', 'Cooked And Peeled Prawn')">
+          <img src="images/cooked-and-peeled-prawn.jpg" alt="Cooked And Peeled Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/cooked-bug.jpg', 'Cooked Bug')">
+          <img src="images/cooked-bug.jpg" alt="Cooked Bug" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/cooked-crab.jpg', 'Cooked Crab')">
+          <img src="images/cooked-crab.jpg" alt="Cooked Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/cooked-mub-crab.jpg', 'Cooked Mub Crab')">
+          <img src="images/cooked-mub-crab.jpg" alt="Cooked Mub Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/cooked-prawn.jpg', 'Cooked Prawn')">
+          <img src="images/cooked-prawn.jpg" alt="Cooked Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/crumbed-calamari.jpg', 'Crumbed Calamari')">
+          <img src="images/crumbed-calamari.jpg" alt="Crumbed Calamari" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/cuttlefish-ink.jpg', 'Cuttlefish Ink')">
+          <img src="images/cuttlefish-ink.jpg" alt="Cuttlefish Ink" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/deep-sea-cod.jpg', 'Deep Sea Cod')">
+          <img src="images/deep-sea-cod.jpg" alt="Deep Sea Cod" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/e-large-king-prawn.jpg', 'E Large King Prawn')">
+          <img src="images/e-large-king-prawn.jpg" alt="E Large King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/extra-large-barramundi.jpg', 'Extra Large Barramundi')">
+          <img src="images/extra-large-barramundi.jpg" alt="Extra Large Barramundi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-barramundi-side.jpg', 'Barramundi Side')">
+          <img src="images/fl-barramundi-side.jpg" alt="Barramundi Side" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-barramundi.jpg', 'Barramundi')">
+          <img src="images/fl-barramundi.jpg" alt="Barramundi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-blue-eye-cod.jpg', 'Blue Eye Cod')">
+          <img src="images/fl-blue-eye-cod.jpg" alt="Blue Eye Cod" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-bluefin-tuna.jpg', 'Bluefin Tuna')">
+          <img src="images/fl-bluefin-tuna.jpg" alt="Bluefin Tuna" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-deep-sea-cod.jpg', 'Deep Sea Cod')">
+          <img src="images/fl-deep-sea-cod.jpg" alt="Deep Sea Cod" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-flathead.jpg', 'Flathead')">
+          <img src="images/fl-flathead.jpg" alt="Flathead" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-jhon-dory.jpg', 'Jhon Dory')">
+          <img src="images/fl-jhon-dory.jpg" alt="Jhon Dory" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-ling.jpg', 'Ling')">
+          <img src="images/fl-ling.jpg" alt="Ling" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-pearch.jpg', 'Pearch')">
+          <img src="images/fl-pearch.jpg" alt="Pearch" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-red-snapper.jpg', 'Red Snapper')">
+          <img src="images/fl-red-snapper.jpg" alt="Red Snapper" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-salmon-cutlet.jpg', 'Salmon Cutlet')">
+          <img src="images/fl-salmon-cutlet.jpg" alt="Salmon Cutlet" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-salmon.jpg', 'Salmon')">
+          <img src="images/fl-salmon.jpg" alt="Salmon" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-snapper.jpg', 'Snapper')">
+          <img src="images/fl-snapper.jpg" alt="Snapper" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-spanish-mackeral-cutlet.jpg', 'Spanish Mackeral Cutlet')">
+          <img src="images/fl-spanish-mackeral-cutlet.jpg" alt="Spanish Mackeral Cutlet" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-swordfish.jpg', 'Swordfish')">
+          <img src="images/fl-swordfish.jpg" alt="Swordfish" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/fl-wild-salmon.jpg', 'Wild Salmon')">
+          <img src="images/fl-wild-salmon.jpg" alt="Wild Salmon" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/flathead.jpg', 'Flathead')">
+          <img src="images/flathead.jpg" alt="Flathead" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/flounder.jpg', 'Flounder')">
+          <img src="images/flounder.jpg" alt="Flounder" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/flying-fish-roe.jpg', 'Flying Fish Roe')">
+          <img src="images/flying-fish-roe.jpg" alt="Flying Fish Roe" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/garden-salad.jpg', 'Garden Salad')">
+          <img src="images/garden-salad.jpg" alt="Garden Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/garlic-prawn.jpg', 'Garlic Prawn')">
+          <img src="images/garlic-prawn.jpg" alt="Garlic Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/greek-salad.jpg', 'Greek Salad')">
+          <img src="images/greek-salad.jpg" alt="Greek Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/half-shell-scollop.jpg', 'Half Shell Scollop')">
+          <img src="images/half-shell-scollop.jpg" alt="Half Shell Scollop" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/jhon-dory.jpg', 'Jhon Dory')">
+          <img src="images/jhon-dory.jpg" alt="Jhon Dory" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/kingfish-sashimi.jpg', 'Kingfish Sashimi')">
+          <img src="images/kingfish-sashimi.jpg" alt="Kingfish Sashimi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/large-banana-prawn.jpg', 'Large Banana Prawn')">
+          <img src="images/large-banana-prawn.jpg" alt="Large Banana Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/large-cooked-king-prawn.jpg', 'Large Cooked King Prawn')">
+          <img src="images/large-cooked-king-prawn.jpg" alt="Large Cooked King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/large-cookedtiger-prawn.jpg', 'Large Cookedtiger Prawn')">
+          <img src="images/large-cookedtiger-prawn.jpg" alt="Large Cookedtiger Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/large-king-prawn.jpg', 'Large King Prawn')">
+          <img src="images/large-king-prawn.jpg" alt="Large King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/large-tiger-prawn.jpg', 'Large Tiger Prawn')">
+          <img src="images/large-tiger-prawn.jpg" alt="Large Tiger Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/largte-seafood-seuce.jpg', 'Largte Seafood Seuce')">
+          <img src="images/largte-seafood-seuce.jpg" alt="Largte Seafood Seuce" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/leather-jacket.jpg', 'Leather Jacket')">
+          <img src="images/leather-jacket.jpg" alt="Leather Jacket" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/ling.jpg', 'Ling')">
+          <img src="images/ling.jpg" alt="Ling" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/lobster-tail.jpg', 'Lobster Tail')">
+          <img src="images/lobster-tail.jpg" alt="Lobster Tail" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/local-awards.jpg', 'Local Awards')">
+          <img src="images/local-awards.jpg" alt="Local Awards" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/local-prawn-meat.jpg', 'Local Prawn Meat')">
+          <img src="images/local-prawn-meat.jpg" alt="Local Prawn Meat" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/local-scollop.jpg', 'Local Scollop')">
+          <img src="images/local-scollop.jpg" alt="Local Scollop" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/marinara-mix.jpg', 'Marinara Mix')">
+          <img src="images/marinara-mix.jpg" alt="Marinara Mix" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/marinated-octupus.jpg', 'Marinated Octupus')">
+          <img src="images/marinated-octupus.jpg" alt="Marinated Octupus" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/medium-banana-prawn.jpg', 'Medium Banana Prawn')">
+          <img src="images/medium-banana-prawn.jpg" alt="Medium Banana Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/medium-cooked-king-prawn.jpg', 'Medium Cooked King Prawn')">
+          <img src="images/medium-cooked-king-prawn.jpg" alt="Medium Cooked King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/mixed-sashmi.jpg', 'Mixed Sashmi')">
+          <img src="images/mixed-sashmi.jpg" alt="Mixed Sashmi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/mullet.jpg', 'Mullet')">
+          <img src="images/mullet.jpg" alt="Mullet" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/mures.jpg', 'Mures')">
+          <img src="images/mures.jpg" alt="Mures" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/oyster-seauce.jpg', 'Oyster Seauce')">
+          <img src="images/oyster-seauce.jpg" alt="Oyster Seauce" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pacific-oyster.jpg', 'Pacific Oyster')">
+          <img src="images/pacific-oyster.jpg" alt="Pacific Oyster" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pearch.jpg', 'Pearch')">
+          <img src="images/pearch.jpg" alt="Pearch" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/peter-noutaros.jpg', 'Peter Noutaros')">
+          <img src="images/peter-noutaros.jpg" alt="Peter Noutaros" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pomfret.jpg', 'Pomfret')">
+          <img src="images/pomfret.jpg" alt="Pomfret" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr--large-cookedtiger-prawn.jpg', ' Large Cookedtiger Prawn')">
+          <img src="images/pr--large-cookedtiger-prawn.jpg" alt=" Large Cookedtiger Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-avruga.jpg', 'Avruga')">
+          <img src="images/pr-avruga.jpg" alt="Avruga" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-baby-octupus.jpg', 'Baby Octupus')">
+          <img src="images/pr-baby-octupus.jpg" alt="Baby Octupus" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-caamari-rings.jpg', 'Caamari Rings')">
+          <img src="images/pr-caamari-rings.jpg" alt="Caamari Rings" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-calamari.jpg', 'Calamari')">
+          <img src="images/pr-calamari.jpg" alt="Calamari" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-cooked-and-peeled-prawn.jpg', 'Cooked And Peeled Prawn')">
+          <img src="images/pr-cooked-and-peeled-prawn.jpg" alt="Cooked And Peeled Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-cooked-bug.jpg', 'Cooked Bug')">
+          <img src="images/pr-cooked-bug.jpg" alt="Cooked Bug" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-cooked-crab.jpg', 'Cooked Crab')">
+          <img src="images/pr-cooked-crab.jpg" alt="Cooked Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-cooked-mub-crab.jpg', 'Cooked Mub Crab')">
+          <img src="images/pr-cooked-mub-crab.jpg" alt="Cooked Mub Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-crumbed-calamari.jpg', 'Crumbed Calamari')">
+          <img src="images/pr-crumbed-calamari.jpg" alt="Crumbed Calamari" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-e-large-king-prawn.jpg', 'E Large King Prawn')">
+          <img src="images/pr-e-large-king-prawn.jpg" alt="E Large King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-flower-cut-squid.jpg', 'Flower Cut Squid')">
+          <img src="images/pr-flower-cut-squid.jpg" alt="Flower Cut Squid" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-flying-fish-roe.jpg', 'Flying Fish Roe')">
+          <img src="images/pr-flying-fish-roe.jpg" alt="Flying Fish Roe" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-garlic-prawn.jpg', 'Garlic Prawn')">
+          <img src="images/pr-garlic-prawn.jpg" alt="Garlic Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-half-shell-scollop.jpg', 'Half Shell Scollop')">
+          <img src="images/pr-half-shell-scollop.jpg" alt="Half Shell Scollop" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-kingfish-sashimi.jpg', 'Kingfish Sashimi')">
+          <img src="images/pr-kingfish-sashimi.jpg" alt="Kingfish Sashimi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-large-banana-prawn.jpg', 'Large Banana Prawn')">
+          <img src="images/pr-large-banana-prawn.jpg" alt="Large Banana Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-large-cooked-king-prawn.jpg', 'Large Cooked King Prawn')">
+          <img src="images/pr-large-cooked-king-prawn.jpg" alt="Large Cooked King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-large-king-prawn.jpg', 'Large King Prawn')">
+          <img src="images/pr-large-king-prawn.jpg" alt="Large King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-large-tiger-prawn.jpg', 'Large Tiger Prawn')">
+          <img src="images/pr-large-tiger-prawn.jpg" alt="Large Tiger Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-live-mud-crab.jpg', 'Live Mud Crab')">
+          <img src="images/pr-live-mud-crab.jpg" alt="Live Mud Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-local-scollop.jpg', 'Local Scollop')">
+          <img src="images/pr-local-scollop.jpg" alt="Local Scollop" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-marinated-octupus.jpg', 'Marinated Octupus')">
+          <img src="images/pr-marinated-octupus.jpg" alt="Marinated Octupus" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-medium-banana-prawn.jpg', 'Medium Banana Prawn')">
+          <img src="images/pr-medium-banana-prawn.jpg" alt="Medium Banana Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-medium-cooked-king-prawn.jpg', 'Medium Cooked King Prawn')">
+          <img src="images/pr-medium-cooked-king-prawn.jpg" alt="Medium Cooked King Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-mixed-sashmi.jpg', 'Mixed Sashmi')">
+          <img src="images/pr-mixed-sashmi.jpg" alt="Mixed Sashmi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-pacific-oyster.jpg', 'Pacific Oyster')">
+          <img src="images/pr-pacific-oyster.jpg" alt="Pacific Oyster" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-prawn-cutlets-.jpg', 'Prawn Cutlets ')">
+          <img src="images/pr-prawn-cutlets-.jpg" alt="Prawn Cutlets " loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-prawn-meat.jpg', 'Prawn Meat')">
+          <img src="images/pr-prawn-meat.jpg" alt="Prawn Meat" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-prawn-skewer.jpg', 'Prawn Skewer')">
+          <img src="images/pr-prawn-skewer.jpg" alt="Prawn Skewer" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-raw-crab.jpg', 'Raw Crab')">
+          <img src="images/pr-raw-crab.jpg" alt="Raw Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-salmon-sashimi.jpg', 'Salmon Sashimi')">
+          <img src="images/pr-salmon-sashimi.jpg" alt="Salmon Sashimi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-salmon-skewer.jpg', 'Salmon Skewer')">
+          <img src="images/pr-salmon-skewer.jpg" alt="Salmon Skewer" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-scollop-skewer.jpg', 'Scollop Skewer')">
+          <img src="images/pr-scollop-skewer.jpg" alt="Scollop Skewer" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-sea-food-platters.jpg', 'Sea Food Platters')">
+          <img src="images/pr-sea-food-platters.jpg" alt="Sea Food Platters" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-seaweed-salad.jpg', 'Seaweed Salad')">
+          <img src="images/pr-seaweed-salad.jpg" alt="Seaweed Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-squid-tube.jpg', 'Squid Tube')">
+          <img src="images/pr-squid-tube.jpg" alt="Squid Tube" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-sydney-rock-oyster.jpg', 'Sydney Rock Oyster')">
+          <img src="images/pr-sydney-rock-oyster.jpg" alt="Sydney Rock Oyster" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-tuna-sashimi.jpg', 'Tuna Sashimi')">
+          <img src="images/pr-tuna-sashimi.jpg" alt="Tuna Sashimi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-western-lobster.jpg', 'Western Lobster')">
+          <img src="images/pr-western-lobster.jpg" alt="Western Lobster" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/pr-wild-salmon-cavier.jpg', 'Wild Salmon Cavier')">
+          <img src="images/pr-wild-salmon-cavier.jpg" alt="Wild Salmon Cavier" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/prawn-cutlets.jpg', 'Prawn Cutlets')">
+          <img src="images/prawn-cutlets.jpg" alt="Prawn Cutlets" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/prawn-meat-1.jpg', 'Prawn Meat 1')">
+          <img src="images/prawn-meat-1.jpg" alt="Prawn Meat 1" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/prawn-meat.jpg', 'Prawn Meat')">
+          <img src="images/prawn-meat.jpg" alt="Prawn Meat" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/prawn-skewer.jpg', 'Prawn Skewer')">
+          <img src="images/prawn-skewer.jpg" alt="Prawn Skewer" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/rainbow-trout.jpg', 'Rainbow Trout')">
+          <img src="images/rainbow-trout.jpg" alt="Rainbow Trout" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/raw-crab.jpg', 'Raw Crab')">
+          <img src="images/raw-crab.jpg" alt="Raw Crab" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/red-snapper.jpg', 'Red Snapper')">
+          <img src="images/red-snapper.jpg" alt="Red Snapper" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/rocket-salad.jpg', 'Rocket Salad')">
+          <img src="images/rocket-salad.jpg" alt="Rocket Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/salmon-cutlet.jpg', 'Salmon Cutlet')">
+          <img src="images/salmon-cutlet.jpg" alt="Salmon Cutlet" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/salmon-sashimi.jpg', 'Salmon Sashimi')">
+          <img src="images/salmon-sashimi.jpg" alt="Salmon Sashimi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/salmon-skewer.jpg', 'Salmon Skewer')">
+          <img src="images/salmon-skewer.jpg" alt="Salmon Skewer" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/salmon.jpg', 'Salmon')">
+          <img src="images/salmon.jpg" alt="Salmon" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sardines.jpg', 'Sardines')">
+          <img src="images/sardines.jpg" alt="Sardines" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/scampi.jpg', 'Scampi')">
+          <img src="images/scampi.jpg" alt="Scampi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/scollop-skewer.jpg', 'Scollop Skewer')">
+          <img src="images/scollop-skewer.jpg" alt="Scollop Skewer" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/seafood-salad.jpg', 'Seafood Salad')">
+          <img src="images/seafood-salad.jpg" alt="Seafood Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/seasoning.jpg', 'Seasoning')">
+          <img src="images/seasoning.jpg" alt="Seasoning" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/seaweed-salad.jpg', 'Seaweed Salad')">
+          <img src="images/seaweed-salad.jpg" alt="Seaweed Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/silver-bream.jpg', 'Silver Bream')">
+          <img src="images/silver-bream.jpg" alt="Silver Bream" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-abalone.jpg', 'Abalone')">
+          <img src="images/sl-abalone.jpg" alt="Abalone" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-caesar.jpg', 'Caesar')">
+          <img src="images/sl-caesar.jpg" alt="Caesar" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-chicken-salt.jpg', 'Chicken Salt')">
+          <img src="images/sl-chicken-salt.jpg" alt="Chicken Salt" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-coleslaw.jpg', 'Coleslaw')">
+          <img src="images/sl-coleslaw.jpg" alt="Coleslaw" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-cooked-prawn.jpg', 'Cooked Prawn')">
+          <img src="images/sl-cooked-prawn.jpg" alt="Cooked Prawn" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-cuttlefish-ink.jpg', 'Cuttlefish Ink')">
+          <img src="images/sl-cuttlefish-ink.jpg" alt="Cuttlefish Ink" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-garden-salad.jpg', 'Garden Salad')">
+          <img src="images/sl-garden-salad.jpg" alt="Garden Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-greek-salad.jpg', 'Greek Salad')">
+          <img src="images/sl-greek-salad.jpg" alt="Greek Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-largte-seafood-seuce.jpg', 'Largte Seafood Seuce')">
+          <img src="images/sl-largte-seafood-seuce.jpg" alt="Largte Seafood Seuce" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-lobster-tail.jpg', 'Lobster Tail')">
+          <img src="images/sl-lobster-tail.jpg" alt="Lobster Tail" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-local-awards.jpg', 'Local Awards')">
+          <img src="images/sl-local-awards.jpg" alt="Local Awards" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-local-prawn-meat.jpg', 'Local Prawn Meat')">
+          <img src="images/sl-local-prawn-meat.jpg" alt="Local Prawn Meat" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-marinara-mix.jpg', 'Marinara Mix')">
+          <img src="images/sl-marinara-mix.jpg" alt="Marinara Mix" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-mures.jpg', 'Mures')">
+          <img src="images/sl-mures.jpg" alt="Mures" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-oyster-seauce.jpg', 'Oyster Seauce')">
+          <img src="images/sl-oyster-seauce.jpg" alt="Oyster Seauce" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-prawn-meat.jpg', 'Prawn Meat')">
+          <img src="images/sl-prawn-meat.jpg" alt="Prawn Meat" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-rocket-salad.jpg', 'Rocket Salad')">
+          <img src="images/sl-rocket-salad.jpg" alt="Rocket Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-scampi.jpg', 'Scampi')">
+          <img src="images/sl-scampi.jpg" alt="Scampi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-seafood-salad.jpg', 'Seafood Salad')">
+          <img src="images/sl-seafood-salad.jpg" alt="Seafood Salad" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-seasoning.jpg', 'Seasoning')">
+          <img src="images/sl-seasoning.jpg" alt="Seasoning" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-small-seafood.jpg', 'Small Seafood')">
+          <img src="images/sl-small-seafood.jpg" alt="Small Seafood" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-smoked-cod.jpg', 'Smoked Cod')">
+          <img src="images/sl-smoked-cod.jpg" alt="Smoked Cod" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-tartare-sauce.jpg', 'Tartare Sauce')">
+          <img src="images/sl-tartare-sauce.jpg" alt="Tartare Sauce" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sl-toothfish.jpg', 'Toothfish')">
+          <img src="images/sl-toothfish.jpg" alt="Toothfish" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/small-seafood.jpg', 'Small Seafood')">
+          <img src="images/small-seafood.jpg" alt="Small Seafood" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/smoked-cod.jpg', 'Smoked Cod')">
+          <img src="images/smoked-cod.jpg" alt="Smoked Cod" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/snapper-1.jpg', 'Snapper 1')">
+          <img src="images/snapper-1.jpg" alt="Snapper 1" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/snapper.jpg', 'Snapper')">
+          <img src="images/snapper.jpg" alt="Snapper" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/spanish-mackeral-cutlet.jpg', 'Spanish Mackeral Cutlet')">
+          <img src="images/spanish-mackeral-cutlet.jpg" alt="Spanish Mackeral Cutlet" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/swordfish.jpg', 'Swordfish')">
+          <img src="images/swordfish.jpg" alt="Swordfish" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sydney-rock-oyster.jpg', 'Sydney Rock Oyster')">
+          <img src="images/sydney-rock-oyster.jpg" alt="Sydney Rock Oyster" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/tartare-sauce.jpg', 'Tartare Sauce')">
+          <img src="images/tartare-sauce.jpg" alt="Tartare Sauce" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/tilapia.jpg', 'Tilapia')">
+          <img src="images/tilapia.jpg" alt="Tilapia" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/toothfish.jpg', 'Toothfish')">
+          <img src="images/toothfish.jpg" alt="Toothfish" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/tuna-sashimi.jpg', 'Tuna Sashimi')">
+          <img src="images/tuna-sashimi.jpg" alt="Tuna Sashimi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/western-lobster.jpg', 'Western Lobster')">
+          <img src="images/western-lobster.jpg" alt="Western Lobster" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-atlantic-salmon.jpg', 'Atlantic Salmon')">
+          <img src="images/wf-atlantic-salmon.jpg" alt="Atlantic Salmon" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-barramundi.jpg', 'Barramundi')">
+          <img src="images/wf-barramundi.jpg" alt="Barramundi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-extra-large-barramundi.jpg', 'Extra Large Barramundi')">
+          <img src="images/wf-extra-large-barramundi.jpg" alt="Extra Large Barramundi" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-flounder.jpg', 'Flounder')">
+          <img src="images/wf-flounder.jpg" alt="Flounder" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-leather-jacket.jpg', 'Leather Jacket')">
+          <img src="images/wf-leather-jacket.jpg" alt="Leather Jacket" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-mullet.jpg', 'Mullet')">
+          <img src="images/wf-mullet.jpg" alt="Mullet" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-pomfret.jpg', 'Pomfret')">
+          <img src="images/wf-pomfret.jpg" alt="Pomfret" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-rainbow-trout.jpg', 'Rainbow Trout')">
+          <img src="images/wf-rainbow-trout.jpg" alt="Rainbow Trout" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-sardines.jpg', 'Sardines')">
+          <img src="images/wf-sardines.jpg" alt="Sardines" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-silver-bream.jpg', 'Silver Bream')">
+          <img src="images/wf-silver-bream.jpg" alt="Silver Bream" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-snapper.jpg', 'Snapper')">
+          <img src="images/wf-snapper.jpg" alt="Snapper" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-tilapia.jpg', 'Tilapia')">
+          <img src="images/wf-tilapia.jpg" alt="Tilapia" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-whitebait.jpg', 'Whitebait')">
+          <img src="images/wf-whitebait.jpg" alt="Whitebait" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wf-whiting.jpg', 'Whiting')">
+          <img src="images/wf-whiting.jpg" alt="Whiting" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/whitebait.jpg', 'Whitebait')">
+          <img src="images/whitebait.jpg" alt="Whitebait" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/whiting.jpg', 'Whiting')">
+          <img src="images/whiting.jpg" alt="Whiting" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wild-salmon-cavier.jpg', 'Wild Salmon Cavier')">
+          <img src="images/wild-salmon-cavier.jpg" alt="Wild Salmon Cavier" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/wild-salmon.jpg', 'Wild Salmon')">
+          <img src="images/wild-salmon.jpg" alt="Wild Salmon" loading="lazy">
+          <div class="gallery-item-overlay"><span>🔍</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" title="Back to top">↑</button>
+  <a id="whatsapp" href="https://wa.me/610288504588" target="_blank">💬</a>
+  <a class="mobile-call-banner" href="tel:0288504588">📞 Tap to Call — (02) 8850 4588</a>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Norwest Fresh Seafood</h3>
+          <p>Sydney's freshest seafood at Norwest Marketplace. Award-winning quality since 2002.</p>
+          <p>📍 4 Century Circuit, Norwest NSW 2153</p>
+          <p>📞 (02) 8850 4588</p>
+          <p>🕐 Mon–Sun: 7am–9pm</p>
+          <div class="social-links">
+            <a class="social-link" href="#">📘</a>
+            <a class="social-link" href="#">📸</a>
+            <a class="social-link" href="https://wa.me/610288504588">💬</a>
+            <a class="social-link" href="tel:0288504588">📞</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="fresh-seafood.html">Fresh Seafood</a></li><li><a href="gourmet.html">Gourmet & Premium</a></li><li><a href="cooked-food.html">Cooked Food</a></li><li><a href="frozen.html">Frozen & Grocery</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="catering.html">Catering</a></li><li><a href="pre-order.html">Pre-Order</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+        <div class="footer-col"><h4>Info</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">Opening Hours</a></li><li><a href="contact.html">Find Us</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Norwest Fresh Seafood. All rights reserved.</p>
+        <p>🏆 2022 Sydney Hills Local Business Award</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

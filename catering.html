@@ -19,7 +19,8 @@
     <div class="nav-container">
       <div class="nav-logo"><span class="logo-icon">🐟</span><div class="logo-text"><span class="logo-main">Norwest Fresh Seafood</span><span class="logo-sub">Est. 2002</span></div></div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li><li><a href="fresh-seafood.html">Fresh Seafood</a></li><li><a href="gourmet.html">Gourmet</a></li><li><a href="cooked-food.html">Cooked Food</a></li><li><a href="frozen.html">Frozen</a></li><li><a href="catering.html" class="active">Catering</a></li><li><a href="contact.html">Contact</a></li><li><a href="pre-order.html" class="nav-cta">Pre-Order</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="fresh-seafood.html">Fresh Seafood</a></li><li><a href="gourmet.html">Gourmet</a></li><li><a href="cooked-food.html">Cooked Food</a></li><li><a href="frozen.html">Frozen</a></li><li><a href="catering.html" class="active">Catering</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li><li><a href="pre-order.html" class="nav-cta">Pre-Order</a></li>
       </ul>
       <span id="openIndicator"></span>
       <button class="hamburger" id="hamburger">&#9776;</button>
@@ -150,6 +151,23 @@
 
 </section>
 
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div>
+          <h3>🐟 Stay Fresh — Join Our Newsletter</h3>
+          <p>Get weekly specials, new arrivals and seafood tips delivered to your inbox</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address">
+          <button class="newsletter-btn" onclick="this.textContent='Subscribed! ✅'">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -162,6 +180,29 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+
+  <!-- LIVE CHAT -->
+  <div id="chatBubble">
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-header"><span>💬</span> Norwest Fresh Seafood</div>
+      <div class="chat-body">
+        <div class="chat-message">Hi there! 👋 Welcome to Norwest Fresh Seafood. How can we help you today?</div>
+        <div class="chat-actions">
+          <button class="chat-action-btn" onclick="chatAction('hours')">🕐 What are your opening hours?</button>
+          <button class="chat-action-btn" onclick="chatAction('order')">🛒 How do I place an order?</button>
+          <button class="chat-action-btn" onclick="chatAction('clean')">✂️ Can you clean my fish?</button>
+        </div>
+      </div>
+    </div>
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
 
   <!-- BACK TO TOP -->
   <button id="backToTop" title="Back to top">↑</button>
@@ -192,5 +233,69 @@ function submitCatering(e) {
   document.getElementById('cSuccess').style.display='block';
 }
 </script>
+
+  <script>
+  // COOKIE BANNER
+  if (!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookieBanner').classList.remove('hidden');
+  }
+  function acceptCookie() {
+    localStorage.setItem('cookieAccepted','1');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function declineCookie() {
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+
+  // LIVE CHAT
+  function toggleChat() {
+    document.getElementById('chatPopup').classList.toggle('open');
+  }
+  function chatAction(action) {
+    const popup = document.getElementById('chatPopup');
+    const body = popup.querySelector('.chat-body');
+    if (action === 'hours') {
+      body.innerHTML = '<div class="chat-message">We are open <strong>7 days a week, 7am to 9pm</strong> — Monday through Sunday including public holidays! 🕐</div><button class="chat-action-btn" onclick="chatBack()">← Back</button>';
+    } else if (action === 'order') {
+      body.innerHTML = '<div class="chat-message">You can pre-order online using our <a href="pre-order.html" style="color:var(--teal);font-weight:700;">Pre-Order form</a>, or call us on <strong>(02) 8850 4588</strong> and we will take your order over the phone! 📞</div><button class="chat-action-btn" onclick="chatBack()">← Back</button>';
+    } else if (action === 'clean') {
+      body.innerHTML = '<div class="chat-message">Yes! When you buy a whole fish we will <strong>clean, scale and fillet it for you free of charge</strong> right here in store ✂️🐟</div><button class="chat-action-btn" onclick="chatBack()">← Back</button>';
+    }
+  }
+  function chatBack() {
+    const popup = document.getElementById('chatPopup');
+    popup.querySelector('.chat-body').innerHTML = `
+      <div class="chat-message">Hi there! 👋 Welcome to Norwest Fresh Seafood. How can we help you today?</div>
+      <div class="chat-actions">
+        <button class="chat-action-btn" onclick="chatAction('hours')">🕐 What are your opening hours?</button>
+        <button class="chat-action-btn" onclick="chatAction('order')">🛒 How do I place an order?</button>
+        <button class="chat-action-btn" onclick="chatAction('clean')">✂️ Can you clean my fish?</button>
+      </div>`;
+  }
+
+  // LIGHTBOX
+  function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Make product images clickable for lightbox
+  document.querySelectorAll('.product-item-img[style*="background-image"]').forEach(function(el) {
+    const url = el.style.backgroundImage.replace(/url\(["']?|["']?\)/g,'');
+    const name = el.nextElementSibling ? el.nextElementSibling.querySelector('h3')?.textContent : '';
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', function() { openLightbox(url, name); });
+  });
+  </script>
+
 </body>
 </html>

@@ -66,12 +66,36 @@
           </div>
         </div>
 
-        <div class="hours-map">
+        <div class="hours-map" style="padding:0;overflow:hidden;">
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.5!2d150.9694!3d-33.7231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7e8d2b5b5b5%3A0x1234567890abcdef!2sNorwest%20Fresh%20Seafood!5e0!3m2!1sen!2sau!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe><div style="display:none;">
           <p>📍</p>
           <p class="map-name">Norwest Fresh Seafood</p>
           <p class="map-address">4 Century Circuit, Norwest NSW 2153</p>
           <p class="map-address">Norwest Marketplace</p>
           <a href="https://maps.google.com/?q=Norwest+Fresh+Seafood+4+Century+Circuit+Norwest" target="_blank" class="btn-primary" style="margin-top:16px;">Get Directions →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div>
+          <h3>🐟 Stay Fresh — Join Our Newsletter</h3>
+          <p>Get weekly specials, new arrivals and seafood tips delivered to your inbox</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address">
+          <button class="newsletter-btn" onclick="this.textContent='Subscribed! ✅'">Subscribe</button>
         </div>
       </div>
     </div>
@@ -90,6 +114,29 @@
   </footer>
   <script src="js/main.js"></script>
 
+  <!-- LIVE CHAT -->
+  <div id="chatBubble">
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-header"><span>💬</span> Norwest Fresh Seafood</div>
+      <div class="chat-body">
+        <div class="chat-message">Hi there! 👋 Welcome to Norwest Fresh Seafood. How can we help you today?</div>
+        <div class="chat-actions">
+          <button class="chat-action-btn" onclick="chatAction('hours')">🕐 What are your opening hours?</button>
+          <button class="chat-action-btn" onclick="chatAction('order')">🛒 How do I place an order?</button>
+          <button class="chat-action-btn" onclick="chatAction('clean')">✂️ Can you clean my fish?</button>
+        </div>
+      </div>
+    </div>
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
   <!-- BACK TO TOP -->
   <button id="backToTop" title="Back to top">↑</button>
 
@@ -98,6 +145,70 @@
 
   <!-- MOBILE CALL BANNER -->
   <a class="mobile-call-banner" href="tel:0288504588">📞 Tap to Call — (02) 8850 4588</a>
+
+
+  <script>
+  // COOKIE BANNER
+  if (!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookieBanner').classList.remove('hidden');
+  }
+  function acceptCookie() {
+    localStorage.setItem('cookieAccepted','1');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function declineCookie() {
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+
+  // LIVE CHAT
+  function toggleChat() {
+    document.getElementById('chatPopup').classList.toggle('open');
+  }
+  function chatAction(action) {
+    const popup = document.getElementById('chatPopup');
+    const body = popup.querySelector('.chat-body');
+    if (action === 'hours') {
+      body.innerHTML = '<div class="chat-message">We are open <strong>7 days a week, 7am to 9pm</strong> — Monday through Sunday including public holidays! 🕐</div><button class="chat-action-btn" onclick="chatBack()">← Back</button>';
+    } else if (action === 'order') {
+      body.innerHTML = '<div class="chat-message">You can pre-order online using our <a href="pre-order.html" style="color:var(--teal);font-weight:700;">Pre-Order form</a>, or call us on <strong>(02) 8850 4588</strong> and we will take your order over the phone! 📞</div><button class="chat-action-btn" onclick="chatBack()">← Back</button>';
+    } else if (action === 'clean') {
+      body.innerHTML = '<div class="chat-message">Yes! When you buy a whole fish we will <strong>clean, scale and fillet it for you free of charge</strong> right here in store ✂️🐟</div><button class="chat-action-btn" onclick="chatBack()">← Back</button>';
+    }
+  }
+  function chatBack() {
+    const popup = document.getElementById('chatPopup');
+    popup.querySelector('.chat-body').innerHTML = `
+      <div class="chat-message">Hi there! 👋 Welcome to Norwest Fresh Seafood. How can we help you today?</div>
+      <div class="chat-actions">
+        <button class="chat-action-btn" onclick="chatAction('hours')">🕐 What are your opening hours?</button>
+        <button class="chat-action-btn" onclick="chatAction('order')">🛒 How do I place an order?</button>
+        <button class="chat-action-btn" onclick="chatAction('clean')">✂️ Can you clean my fish?</button>
+      </div>`;
+  }
+
+  // LIGHTBOX
+  function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Make product images clickable for lightbox
+  document.querySelectorAll('.product-item-img[style*="background-image"]').forEach(function(el) {
+    const url = el.style.backgroundImage.replace(/url\(["']?|["']?\)/g,'');
+    const name = el.nextElementSibling ? el.nextElementSibling.querySelector('h3')?.textContent : '';
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', function() { openLightbox(url, name); });
+  });
+  </script>
 
 </body>
 </html>
