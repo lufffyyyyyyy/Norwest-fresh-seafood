@@ -288,5 +288,22 @@
   });
   </script>
 
+
+  <script>
+  // Auto-fill from menu cart
+  window.addEventListener('DOMContentLoaded', function() {
+    const items = sessionStorage.getItem('preorderItems');
+    if (items) {
+      const qty = document.getElementById('quantity');
+      if (qty) qty.value = items;
+      sessionStorage.removeItem('preorderItems');
+      // Show success banner
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background:#E8F5E9;border:1px solid #4CAF50;border-radius:8px;padding:14px 20px;margin-bottom:24px;font-size:14px;color:#2E7D32;font-weight:600;';
+      banner.innerHTML = '✅ Your menu items have been added to the form! Fill in your details and submit.';
+      document.querySelector('.preorder-form-wrap h2').after(banner);
+    }
+  });
+  </script>
 </body>
 </html>

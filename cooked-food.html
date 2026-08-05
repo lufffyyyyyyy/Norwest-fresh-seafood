@@ -679,6 +679,7 @@
 
 
 <script>
+// ── TAB SYSTEM ──
 function showTab(tab) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
@@ -686,18 +687,121 @@ function showTab(tab) {
   event.target.classList.add('active');
 }
 
-function addToOrder(item) {
-  // Show toast
-  const toast = document.getElementById('order-toast');
-  toast.textContent = '✅ ' + item + ' added to order!';
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2500);
-  
-  // Store in sessionStorage
-  let orders = JSON.parse(sessionStorage.getItem('pendingOrder') || '[]');
-  orders.push(item);
-  sessionStorage.setItem('pendingOrder', JSON.stringify(orders));
+// ── CART SYSTEM ──
+let cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+
+function saveCart() {
+  sessionStorage.setItem('cart', JSON.stringify(cart));
+  updateCartUI();
 }
+
+function addToOrder(item) {
+  const existing = cart.find(i => i.name === item);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ name: item, qty: 1 });
+  }
+  saveCart();
+
+  // Toast
+  const toast = document.getElementById('order-toast');
+  toast.textContent = '✅ ' + item + ' added!';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  saveCart();
+}
+
+function changeQty(index, delta) {
+  cart[index].qty += delta;
+  if (cart[index].qty <= 0) cart.splice(index, 1);
+  saveCart();
+}
+
+function clearCart() {
+  cart = [];
+  saveCart();
+}
+
+function updateCartUI() {
+  const count = cart.reduce((sum, i) => sum + i.qty, 0);
+  document.getElementById('cart-count').textContent = count;
+
+  const cartBtn = document.getElementById('cart-btn');
+  cartBtn.style.display = cart.length > 0 ? 'flex' : 'none';
+
+  const cartItems = document.getElementById('cart-items');
+  const cartEmpty = document.getElementById('cart-empty');
+  const cartFooter = document.getElementById('cart-footer');
+
+  if (cart.length === 0) {
+    cartEmpty.style.display = 'block';
+    cartItems.innerHTML = '';
+    cartFooter.style.display = 'none';
+  } else {
+    cartEmpty.style.display = 'none';
+    cartFooter.style.display = 'block';
+    cartItems.innerHTML = cart.map((item, i) => `
+      <div class="cart-item">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-controls">
+          <button class="qty-btn" onclick="changeQty(${i}, -1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${i}, 1)">+</button>
+          <button class="remove-btn" onclick="removeFromCart(${i})">✕</button>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+function toggleCart() {
+  document.getElementById('cart').classList.toggle('open');
+  document.getElementById('cart-overlay').classList.toggle('active');
+}
+
+function goToPreorder() {
+  const items = cart.map(i => i.qty > 1 ? `${i.qty}x ${i.name}` : i.name).join(', ');
+  const notes = document.getElementById('cart-notes').value;
+  const full = items + (notes ? ' | Notes: ' + notes : '');
+  sessionStorage.setItem('preorderItems', full);
+  window.location.href = 'pre-order.html?from=menu';
+}
+
+// Init
+updateCartUI();
 </script>
+  <!-- ORDER CART -->
+  <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+  <div id="cart" class="cart-panel">
+    <div class="cart-header">
+      <h3>🛒 Your Order</h3>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <div class="cart-empty" id="cart-empty">
+        <div style="font-size:48px;">🛒</div>
+        <p>Your order is empty</p>
+        <p style="font-size:13px;color:#AAA;">Click "+ Add to Order" on any item</p>
+      </div>
+      <div id="cart-items"></div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none;">
+      <div class="cart-note">
+        <textarea placeholder="Any special requests or notes..." id="cart-notes" rows="2"></textarea>
+      </div>
+      <button class="cart-checkout-btn" onclick="goToPreorder()">📋 Send to Pre-Order Form →</button>
+      <button class="cart-clear-btn" onclick="clearCart()">Clear Order</button>
+    </div>
+  </div>
+
+  <!-- FLOATING CART BUTTON -->
+  <button id="cart-btn" class="cart-float-btn" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span> items
+  </button>
+
 </body>
-</html>
