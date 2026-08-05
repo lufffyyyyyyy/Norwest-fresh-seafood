@@ -52,6 +52,17 @@
   <section class="page-content">
     <div class="container">
 
+
+      <!-- SEARCH BAR -->
+      <div class="search-wrap">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Search products... e.g. salmon, prawns, oysters" oninput="searchProducts(this.value)">
+          <button onclick="document.getElementById('searchInput').value='';searchProducts('');" style="background:none;border:none;cursor:pointer;font-size:16px;color:#999;">✕</button>
+        </div>
+      </div>
+      <div class="search-no-results" id="searchNoResults">No products found. Try a different search term.</div>
+
       <div class="filter-row">
         <button class="filter-btn active" onclick="filterProducts('all')">All</button>
         <button class="filter-btn" onclick="filterProducts('whole-fish')">Whole Fish</button>
@@ -595,6 +606,55 @@
     el.addEventListener('click', function() { openLightbox(url, name); });
   });
   </script>
+
+
+<script>
+function searchProducts(query) {
+  const q = query.toLowerCase().trim();
+  const noResults = document.getElementById('searchNoResults');
+  const filterRow = document.querySelector('.filter-row');
+  const titles = document.querySelectorAll('.product-section-title');
+  const grids = document.querySelectorAll('.product-grid');
+  let totalVisible = 0;
+
+  if (q === '') {
+    // Reset — show everything
+    filterRow.style.display = 'flex';
+    titles.forEach(t => t.style.display = 'inline-block');
+    grids.forEach(g => {
+      g.style.display = 'grid';
+      g.querySelectorAll('.product-item').forEach(item => item.style.display = 'block');
+    });
+    noResults.style.display = 'none';
+    return;
+  }
+
+  // Hide filter row when searching
+  filterRow.style.display = 'none';
+
+  grids.forEach(function(grid, i) {
+    let gridVisible = 0;
+    grid.style.display = 'grid';
+    grid.querySelectorAll('.product-item').forEach(function(item) {
+      const name = item.querySelector('h3') ? item.querySelector('h3').textContent.toLowerCase() : '';
+      const desc = item.querySelector('p') ? item.querySelector('p').textContent.toLowerCase() : '';
+      if (name.includes(q) || desc.includes(q)) {
+        item.style.display = 'block';
+        gridVisible++;
+        totalVisible++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    // Show/hide section title
+    const title = titles[i];
+    if (title) title.style.display = gridVisible > 0 ? 'inline-block' : 'none';
+    if (gridVisible === 0) grid.style.display = 'none';
+  });
+
+  noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+}
+</script>
 
 </body>
 </html>
