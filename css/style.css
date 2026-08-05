@@ -2231,3 +2231,90 @@ a.special-card:hover {
   .cart-panel { width: 100vw; }
   .cart-float-btn { bottom: 130px; }
 }
+
+/* ── COMPREHENSIVE MOBILE FIX ── */
+
+/* Small phones (320px - 480px) */
+@media (max-width: 480px) {
+  .hero-title { font-size: 32px; }
+  .hero-sub { font-size: 15px; }
+  .hero-stats { flex-direction: column; gap: 12px; }
+  .stat-num { font-size: 22px; }
+  .btn-primary, .btn-secondary { padding: 12px 20px; font-size: 14px; }
+  .hero-buttons { flex-direction: column; }
+  .section-title { font-size: 24px; }
+  .specials-title { font-size: 24px; }
+  .special-card .special-img { height: 140px; }
+  .special-info h3 { font-size: 16px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .product-item-img { height: 80px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .about-layout { grid-template-columns: 1fr; }
+  .about-img-placeholder { height: 250px; font-size: 60px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; font-size: 11px; }
+  .menu-tab { padding: 6px 10px; font-size: 11px; }
+  .menu-section-full { grid-template-columns: 1fr; }
+  .preorder-layout { grid-template-columns: 1fr; }
+  .preorder-form-wrap { padding: 16px; }
+  .form-row { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .wf-card-img-h, .wf-card-img-blank-h { width: 90px; min-height: 90px; }
+  .wf-card-info-h { padding: 10px 12px; }
+  .wf-card-info-h h3 { font-size: 14px; }
+  .clean-badge { font-size: 10px; }
+  .recipe-tip { font-size: 10px; }
+  .search-box input { font-size: 13px; }
+  .newsletter-input { width: 100%; }
+  .hours-layout { grid-template-columns: 1fr; }
+  .catering-layout { grid-template-columns: 1fr; }
+  .page-title { font-size: 28px; }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .specials-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-stats { flex-wrap: wrap; gap: 16px; }
+  #chatBubble { bottom: 140px; }
+  #whatsapp { bottom: 76px; }
+  #backToTop { bottom: 128px; }
+  .cart-float-btn { bottom: 128px; font-size: 12px; padding: 10px 14px; }
+  .faq-item { padding: 14px; }
+  .faq-q { font-size: 13px; }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title { font-size: 48px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .specials-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .menu-section-full { grid-template-columns: repeat(2, 1fr); }
+  .about-layout { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hours-layout { grid-template-columns: 1fr; }
+  .catering-layout { grid-template-columns: 1fr; }
+  .preorder-layout { grid-template-columns: 1fr; }
+  nav .nav-links { gap: 16px; }
+  .nav-links a { font-size: 12px; }
+}
+
+/* Fix nav overflow on medium screens */
+@media (max-width: 1100px) {
+  .nav-container { padding: 0 16px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 12px; }
+  .logo-main { font-size: 14px; }
+}
+
+/* Touch improvements */
+@media (hover: none) {
+  .product-card:hover,
+  .why-card:hover,
+  .special-card:hover,
+  .wf-card-h:hover { transform: none; }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover { transform: none; }
+}
