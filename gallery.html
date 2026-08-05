@@ -15,6 +15,16 @@
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 
+
+  <!-- COOKIE BANNER -->
+  <div id="cookieBanner" class="hidden">
+    <div class="cookie-text">🍪 We use cookies to improve your experience. By continuing to browse, you agree to our use of cookies.</div>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookie()">Accept All</button>
+      <button class="cookie-decline" onclick="declineCookie()">Decline</button>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
@@ -798,11 +808,42 @@
     <div id="lightboxCaption" class="lightbox-caption"></div>
   </div>
 
+  <!-- LIVE CHAT -->
+  <div id="chatBubble">
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-header"><span>💬</span> Norwest Fresh Seafood</div>
+      <div class="chat-body">
+        <div class="chat-message">Hi there! 👋 How can we help you today?</div>
+        <div class="chat-actions">
+          <button class="chat-action-btn" onclick="chatAction('hours')">🕐 Opening hours?</button>
+          <button class="chat-action-btn" onclick="chatAction('order')">🛒 How to order?</button>
+          <button class="chat-action-btn" onclick="chatAction('clean')">✂️ Can you clean my fish?</button>
+        </div>
+      </div>
+    </div>
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+  </div>
   <!-- BACK TO TOP -->
   <button id="backToTop" title="Back to top">↑</button>
   <a id="whatsapp" href="https://wa.me/610288504588" target="_blank">💬</a>
   <a class="mobile-call-banner" href="tel:0288504588">📞 Tap to Call — (02) 8850 4588</a>
 
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div>
+          <h3>🐟 Stay Fresh — Join Our Newsletter</h3>
+          <p>Get weekly specials and seafood tips delivered to your inbox</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address">
+          <button class="newsletter-btn" onclick="this.textContent='Subscribed! ✅'">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
